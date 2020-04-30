@@ -1,0 +1,34 @@
+<div md-swipe-up="goHome()" md-swipe-down="showControls = true" adaptive-background
+ab-image-class="fitted-image">
+<div class="loading" ng-show="showLoader">Loading</div>
+<div class="floatingControls" style="top: 0px !important;" ng-show-timed trigger="showControls"
+    duration="{{showControlsDuration}}">
+    <div class="controlButtons">
+            <input type="number" min="1" max="{{numberOfPages}}" maxlength="5" size="5" string-to-number
+                ng-model="jumpTarget" ng-trim="true" class="pages pageInput"
+                ng-enter="goToPage(jumpTarget)" />
+            <span class="pages numPages">/ {{numberOfPages}}</span>
+            <i class="icon-goto controlButton" ng-click="goToPage(jumpTarget)"></i>
+    </div>
+</div>
+<img imageonload toggle="showLoader" on-image-load-error="images/placeholderPage.png"
+    class="fitted-image fade-in" ng-src="{{pageImageUrl}}" md-swipe-left="nextPage()"
+    md-swipe-right="previousPage()" ng-click="nextPage()" style="height: {{pageHeight}} !important;" />
+<div class="floatingControls" ng-show-timed trigger="showControls" duration="{{showControlsDuration}}">
+    <div class="controlButtons">
+        <div>
+            <span class="icon-first controlButton" ng-click="firstPage()"
+                ng-class="{disabled: currentPage === 1}"></span>
+            <span class="icon-previous controlButton" ng-click="previousPage()"
+                ng-class="{disabled: currentPage === 1}"></span>
+            <span class="icon-home controlButton" ng-click="goHome();"></span>
+            <span class="icon-next controlButton" ng-click="nextPage()"
+                ng-class="{disabled: currentPage === numberOfPages}"></span>
+            <span class="icon-last controlButton" ng-click="lastPage()"
+                ng-class="{disabled: currentPage === numberOfPages}"></span>
+        </div>
+    </div>
+</div>
+<div><img ng-src="{{preloadedImageURL}}" class="preloaded-image" /></div>
+</!-->
+</div>
