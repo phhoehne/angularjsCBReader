@@ -37,7 +37,7 @@ angular.module('CBRapp', [
 $mdThemingProvider.theme('default')
         .primaryPalette('blue')
         .accentPalette('pink')
-        //.dark()
+        .dark()
         ;
 // Enable browser color
 $mdThemingProvider.enableBrowserColor();
