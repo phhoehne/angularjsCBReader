@@ -1,7 +1,8 @@
 'use strict';
 angular.module('CBRapp.home', [])
-    .controller('HomeCtrl', ['$scope', '$state', '$http', '$window', function ($scope, $state, $http, $window) {
-        $scope.pathToCBRServer = "http://localhost/phpCBR";
+    .controller('HomeCtrl', ['$scope', '$state', '$http', 'serverPath', function ($scope, $state, $http, serverPath) {
+
+        $scope.pathToCBRServer = serverPath;
         $scope.thumbPath = $scope.pathToCBRServer + "/thumbs";
         $scope.books = [];
         $scope.search = '';

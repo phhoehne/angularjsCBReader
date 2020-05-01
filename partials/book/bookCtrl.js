@@ -1,9 +1,9 @@
 'use strict';
 angular.module('CBRapp.book', [])
-    .controller('BookCtrl', ['$scope', '$state', '$stateParams', '$http', '$window', function ($scope, $state, $stateParams, $http, $window) {
+    .controller('BookCtrl', ['$scope', '$state', '$stateParams', '$http', '$window', 'serverPath', function ($scope, $state, $stateParams, $http, $window, serverPath) {
         $scope.currentBook = $stateParams.title;
 
-        $scope.pathToCBRServer = "http://localhost/phpCBR";
+        $scope.pathToCBRServer = serverPath;
         var url = $scope.pathToCBRServer + "/api.php/pages/" + $scope.currentBook;
 
         var pageImageUrlBase = $scope.pathToCBRServer + "/api.php/page/";

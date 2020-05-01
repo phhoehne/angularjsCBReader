@@ -8,6 +8,12 @@ angular.module('CBRapp', [
     'CBRapp.book'
 ])
 
+/*
+    Configure path to your phpCBRServer here
+    Mind that you have to add appropriate origin handling headers in api.php if the phpCBRServer is not on the same server as the this frontend!!!
+*/
+.constant('serverPath','/phpCBR')
+
 .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
     $locationProvider.html5Mode(false);
