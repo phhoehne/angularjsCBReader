@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="CBRapp">
+<html lang="en" ng-app="CBRapp" ng-cloak="">
 
 <head>
     <title>Comic Book Reader</title>
@@ -16,13 +16,11 @@
     <link href="css/icons.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body style="overflow-y: auto !important;">
+<body style="overflow-y: hidden!important; height: 100%!important">
 
-    <div layout="row" layout-align="center start" ng-cloak="">
-        <div layout="row" flex flex-gt-lg="60">
-            <md-content layout="column" flex  id="content" layout-align="center center"  style="height: 100vh !important; overflow-y: auto !important;">
-                <div ui-view layout-fill></div>
-            </md-content>
+    <div layout="row" layout-align="center start" style="overflow-y: hidden!important">
+        <div layout="column" flex flex-gt-lg="60">
+            <div ui-view layout-fill></div>
         </div>
     </div>
 

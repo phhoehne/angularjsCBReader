@@ -4,11 +4,6 @@ body, html {
     color: white;
 }
 
-.ui-view {
-    height: 100vh;
-    background:#101010;
-}
-
 .disabled {
     opacity: 0.5;
     outline: none !important;
@@ -47,12 +42,10 @@ body, html {
     display: table;
     left: 50%;
     bottom: 1vh;
-
 }
 
 .floatingControls .controlButtons {
     position: relative;
-
     vertical-align: middle;
     border: none;
     background: rgba(100,100,100, 0.6);
